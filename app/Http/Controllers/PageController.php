@@ -49,7 +49,12 @@ class PageController extends Controller
     public function show($id)
     {
         //
-
+        $data = ComicsModel::find($id);
+        if ($data) {
+            return view('comics.show', compact('data'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
