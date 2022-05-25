@@ -16,8 +16,7 @@ class PageController extends Controller
     {
         //
         $data = ComicsModel::all();
-        return view('index', compact('data') );
-
+        return view('comics.index', compact('data'));
     }
 
     /**
@@ -50,6 +49,7 @@ class PageController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
