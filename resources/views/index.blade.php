@@ -3,7 +3,7 @@
 <div>
     @foreach($data as $comic)
     <h1>{{ $comic ->title}}</h1>
-    <img src="{{ $comic ->thumb}}" alt="">
+    <img src="{{ $comic ->thumb}}" alt="{{ $comic ->title}}">
     <p>{{ $comic ->description}}</p>
     <p>{{ $comic ->series}}</p>
     <p>{{ $comic ->type}}</p>
