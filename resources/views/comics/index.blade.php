@@ -4,5 +4,5 @@
     <img src="{{ $comic ->thumb}}" alt="{{ $comic ->title}}">
     <a href="{{ route('comics.show', $comic -> id)}}">Show details</a>
     @endforeach
-    <a href="{{ route('comics.create', $comic -> id)}}">Create new</a>
+    <a href="{{ route('comics.create')}}">Create new</a>
 </div>

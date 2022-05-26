@@ -39,14 +39,12 @@ class PageController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request);
         $data = $request->all();
         $comicItem = new ComicsModel();
         $comicItem->fill($data);
         $comicItem->save();
-        $id = $comicItem->id;
 
-        return redirect()->route('comics.show', ['comicItem'->$id]);
+        return redirect()->route('comics.index');
     }
 
     /**
