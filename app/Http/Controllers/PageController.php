@@ -15,8 +15,8 @@ class PageController extends Controller
     public function index()
     {
         //
-        $data = ComicsModel::all();
-        return view('comics.index', compact('data'));
+        $comics = ComicsModel::all();
+        return view('comics.index', compact('comics'));
     }
 
     /**
