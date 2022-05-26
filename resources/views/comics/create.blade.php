@@ -24,6 +24,6 @@
         <label for="sale_date">Sale_date</label>
         <input type="text" name="sale_date">
     </div>
-    <button type="submit"></button>
+    <button type="submit">submit</button>
 
 </form>
