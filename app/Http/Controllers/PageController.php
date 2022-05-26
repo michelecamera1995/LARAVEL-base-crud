@@ -90,7 +90,7 @@ class PageController extends Controller
         $comic = ComicsModel::findOrFail($id);
         $data = $request->all();
         $comic->fill($data);
-        $comic->save();
+        $comic->update();
         return redirect()->route('comics.index');
     }
 
@@ -103,5 +103,8 @@ class PageController extends Controller
     public function destroy($id)
     {
         //
+        $comic = ComicsModel::find($id);
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
